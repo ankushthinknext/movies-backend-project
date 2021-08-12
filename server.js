@@ -10,7 +10,9 @@ const admin = require("./middlewares/admin");
 
 //mongodb conn
 mongoose
-	.connect("mongodb://localhost/movies")
+	.connect(
+		"mongodb+srv://helloankush:Mongo7827@cluster0.zt3fe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+	)
 	.then(() => console.log("Connected successfully to mongo db!"))
 	.catch((err) => console.log(err));
 const app = express();
